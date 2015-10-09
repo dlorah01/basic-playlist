@@ -1,30 +1,31 @@
 
 var listas = [];
-$(document).ready(function(){$('[data-toggle=offcanvas]').click(function() {
-  $('.row-offcanvas').toggleClass('active');
-});
-
-$('.btn-toggle').click(function() {
-  $(this).find('.btn').toggleClass('active').toggleClass('btn-default').toggleClass('btn-primary');
-});
-
-})
-
-// cargar el JSON con datos
-  $.getJSON( 
-    "test.json", 
-    function( data ) {
-      // asigna los datos del JSON al arreglo libros
-      listas = data;
-      console.log( data );
-      console.log( entro a la carga );
-      // muestra los libros en la lista
-      mostrarListas( listas );
+// al cargar la página
+$(document).ready(function(){
+  
+  
+  // asigna un manejador al evento "onClick"
+  // del boton de cargar JSON
+  $( "#btn_load_json").click(
+    function () {
+      
+      // cargar el JSON con datos
+      $.getJSON( 
+        "books.json", 
+        function( data ) {
+          // asigna los datos del JSON al arreglo libros
+          listas = data;
+          console.log( data );
+          
+          // mostrar JSON de libros
+          $("#json_libros").val( JSON.stringify(data), null, '\t' );
+          
+          // muestra los libros en la lista
+          mostrarListas( listas );
+        }
+      );      
     }
-  ); 
-
-
-;
+  );
 
 
 function mostrarListas( listas ) {
