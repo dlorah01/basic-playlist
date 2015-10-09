@@ -17,6 +17,7 @@ $('.btn-toggle').click(function() {
       // asigna los datos del JSON al arreglo libros
       listas = data;
       console.log( data );
+      console.log( entro a la carga );
       // muestra los libros en la lista
       mostrarListas( listas );
     }
