@@ -2,24 +2,13 @@
 var listas = [];
 // al cargar la página
 $(document).ready(function(){
-  
-  
-  // asigna un manejador al evento "onClick"
-  // del boton de cargar JSON
-  $( "#btn_load_json").click(
-    function () {
-      
       // cargar el JSON con datos
       $.getJSON( 
-        "books.json", 
+        "test.json", 
         function( data ) {
           // asigna los datos del JSON al arreglo libros
           listas = data;
           console.log( data );
-          
-          // mostrar JSON de libros
-          $("#json_libros").val( JSON.stringify(data), null, '\t' );
-          
           // muestra los libros en la lista
           mostrarListas( listas );
         }
