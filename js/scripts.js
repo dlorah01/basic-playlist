@@ -1,20 +1,15 @@
 
 var listas;
+var canciones;
 // al cargar la página
 $(document).ready(function(){
       // cargar el JSON con datos
-      $.getJSON( 
-        "test.json", 
-        function( data ) {
-          // asigna los datos del JSON al arreglo libros
-          listas = data;
-          console.log( data );
-          // muestra los libros en la lista
-          mostrarListas( listas );
-        }
-      );      
-    }
-  );
+      $.getJSON("https://raw.githubusercontent.com/juaoose/201520/master/WEB/js-playslit/test.json", function(json){
+	listas = $.map(json, function(el){return el;});
+});
+
+  
+  
 
 
 function mostrarListas( listas ) {
