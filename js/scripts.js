@@ -1,5 +1,5 @@
 
-var listas = [];
+var listas;
 // al cargar la página
 $(document).ready(function(){
       // cargar el JSON con datos
