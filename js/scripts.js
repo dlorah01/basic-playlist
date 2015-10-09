@@ -1,4 +1,5 @@
 
+var listas = [];
 $(document).ready(function(){$('[data-toggle=offcanvas]').click(function() {
   $('.row-offcanvas').toggleClass('active');
 });
@@ -24,7 +25,6 @@ $('.btn-toggle').click(function() {
 
 ;
 
-var listas = [];
 
 function mostrarListas( listas ) {
   
