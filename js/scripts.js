@@ -2,9 +2,9 @@
 var listas;
 var canciones;
 // al cargar la página
-$(document).ready(function(){$.getJSON("test.json", function(json){
+$(document).ready($.getJSON("test.json", function(json){
 	listas = $.map(json, function(el){return el;});
-});});
+}));
 
   
   
