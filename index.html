@@ -29,8 +29,18 @@
 	<li><a href="#" class=list-group-item>{{name}} - {{artist}} - {{duration}}</a></li>
 	{{/each}}
 	</script>
-
+	
+	
 	<script id="template_songs" type="text/x-handlebars-template">
+	<!-- Lista de listas de lectura
+	reemplaza el contenido de id="dropdown_listas"
+	-->
+	{{#each this}}
+	<li><a class=list-group-item>{{name}} - {{artist}} - {{duration}}</a></li>
+	{{/each}}
+	</script>
+
+	<script id="template_songs_list" type="text/x-handlebars-template">
 	<!-- Lista de libros 
 	reemplaza el contenido de id="lista_libros"
 	-->
@@ -84,7 +94,7 @@
 	  <div class="row">
 		 <div class="col-sm-6">
 			<div class="panel panel-default">
-			  <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Newest Items</h4></div>
+			  <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Canciones Disponibles</h4></div>
 				<div class="panel-body">
 				  <div class="list-group" id="songs">
 				  </div>
@@ -93,9 +103,9 @@
 		</div><!--/col-->
 		<div class="col-sm-6">
 			<div class="panel panel-default">
-			  <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Newest Items</h4></div>
+			  <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Canciones Lista</h4></div>
 				<div class="panel-body">
-				  <div class="list-group">
+				  <div class="list-group" id="songs-list">
 					<a href="#" class="list-group-item active">Active item</a>
 					<a href="#" class="list-group-item">Second item</a>
 					<a href="#" class="list-group-item">Third item</a>
