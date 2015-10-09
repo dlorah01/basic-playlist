@@ -5,11 +5,23 @@ var canciones;
 $(document).ready($.getJSON("test.json", function(json){
 	listas = $.map(json, function(el){return el;});
 	console.log(listas);
-	mostrarListas(listas);
+	mostrarCanciones(listas);
 }));
 
   
   
+
+function mostrarCanciones( listas ) {
+  
+  var fuentePlantilla =  $("#template_songs").html();
+  var plantilla = Handlebars.compile( fuentePlantilla );
+  var html = plantilla( listas );
+  $( "#playlists" ).html( html );
+  $(".list-group a").click(function () {
+    
+    console.log("Selected Option:"+$(this).text());
+  });
+}
 
 
 function mostrarListas( listas ) {
