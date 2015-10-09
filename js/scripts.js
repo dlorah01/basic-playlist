@@ -7,7 +7,22 @@ $('.btn-toggle').click(function() {
   $(this).find('.btn').toggleClass('active').toggleClass('btn-default').toggleClass('btn-primary');
 });
 
-});
+})
+
+// cargar el JSON con datos
+  $.getJSON( 
+    "test.json", 
+    function( data ) {
+      // asigna los datos del JSON al arreglo libros
+      listas = data;
+      console.log( data );
+      // muestra los libros en la lista
+      mostrarListas( listas );
+    }
+  ); 
+
+
+;
 
 var listas = [];
 
@@ -45,15 +60,3 @@ function mostrarCancionesLista( lista ) {
   $( "#songs" ).html( html );
   
 }
-
-// cargar el JSON con datos
-  $.getJSON( 
-    "test.json", 
-    function( data ) {
-      // asigna los datos del JSON al arreglo libros
-      listas = data;
-      console.log( data );
-      // muestra los libros en la lista
-      mostrarListas( listas );
-    }
-  ); 
