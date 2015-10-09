@@ -4,6 +4,7 @@ var canciones;
 // al cargar la página
 $(document).ready($.getJSON("test.json", function(json){
 	listas = $.map(json, function(el){return el;});
+	console.log(listas);
 }));
 
   
