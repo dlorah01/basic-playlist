@@ -2,11 +2,9 @@
 var listas;
 var canciones;
 // al cargar la página
-$(document).ready(function(){
-      // cargar el JSON con datos
-      $.getJSON("https://raw.githubusercontent.com/juaoose/201520/master/WEB/js-playslit/test.json", function(json){
+$(document).ready(function(){$.getJSON("test.json", function(json){
 	listas = $.map(json, function(el){return el;});
-});
+});});
 
   
   
