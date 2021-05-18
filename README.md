@@ -1,4 +1,4 @@
-# PlayList 2
+# Basic PlayList
 This project was generated using HTML, Javascript and CSS. Is a simple playlist which can is loaded using JSON documents.
 
 ## Deployment
